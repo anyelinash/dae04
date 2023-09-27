@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Entradas por Autor</title>
+</head>
+<body>
+    <h1>Entradas por Autor - {{ autor.nombre }}</h1>
+    <ul>
+        {% for entrada in entradas %}
+            <li>
+                <h2>{{ entrada.titulo }}</h2>
+                <p>{{ entrada.contenido }}</p>
+                <p>Fecha de Publicación: {{ entrada.fecha_publicacion }}</p>
+            </li>
+        {% empty %}
+            <p>No hay entradas para este autor.</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Entradas</title>
+</head>
+<body>
+    <h1>Lista de Entradas</h1>
+    <ul>
+        {% for entrada in entradas %}
+            <li>
+                <h2>{{ entrada.titulo }}</h2>
+                <p>{{ entrada.contenido }}</p>
+                <p>Autor: {{ entrada.autor }}</p>
+                <p>Fecha de Publicación: {{ entrada.fecha_publicacion }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
